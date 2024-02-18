@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 const Button = styled.a`
   cursor: ${({ disabled }) => disabled ? `default` : `pointer`};
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
   text-align: center;
   white-space: nowrap;
   font-size: 17px;
@@ -34,6 +36,12 @@ const Button = styled.a`
     padding-bottom: 4px;
     border-radius: 12px;
   ` : ``}
+  svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: center;
+    margin: 0 -0.25em;
+  }
 `;
 
 export default Button;

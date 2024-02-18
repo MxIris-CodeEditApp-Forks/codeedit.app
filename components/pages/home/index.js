@@ -10,15 +10,16 @@ import FeaturesSection from './sections/FeaturesSection';
 import CtaSection from './sections/CtaSection';
 
 import SampleStorySection from './sections/SampleStorySection';
-import links from '@/data/links';
+import config from '@/data/config';
+import Head from 'next/head';
 
 export default function HomePage({ versionNumber }) {
   return (
-    <div>
-      <Ribbon onClick={() => window.open(links.githubProject)}>
+    <>
+      <Ribbon onClick={() => window.open(config.links.githubProject)}>
         CodeEdit is currently in development. Check out the roadmap.
       </Ribbon>
-      <HeroSection versionNumber={versionNumber}/>
+      <HeroSection versionNumber={versionNumber} />
       <IntroFeaturesSection />
       {/* <SampleStorySection /> */}
       {/* <SampleStorySection /> */}
@@ -28,6 +29,6 @@ export default function HomePage({ versionNumber }) {
       <SectionDivider contained /> */}
       {/* <SocialSection /> */}
       {/* <CtaSection /> */}
-    </div>
+    </>
   );
 }
